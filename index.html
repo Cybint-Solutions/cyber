@@ -1,8 +1,29 @@
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js?pre=1"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+<h1>Hi</h1>
+</body>
+</html>
+
+<script
+<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/shell.js"></script>
 <script>
   hbspt.forms.create({
-    region: "na1",
-    portalId: "22612442",
-    formId: "0f87583b-64aa-43e0-aa9c-d32b214c7df4"
-  });
+ portalId: "22612442",
+ formId: "0f87583b-64aa-43e0-aa9c-d32b214c7df4"
+});
+
+window.addEventListener('message', event => {
+   if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+       alert("Form Submitted!");
+      window.location.href = "https://cybint-solutions.github.io/cyber/content";
+
+
+   }
+});
 </script>
